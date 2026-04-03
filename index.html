@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Chango&family=Eagle+Lake&family=Fredericka+the+Great&family=Gravitas+One&family=Sekuya&display=swap"
+    rel="stylesheet">
+</head>
+<style type="text/css">
+  body {
+    cursor: url('data:image/x-icon;base64,AAACAAEAICAAAAAAAACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAQAAAAAAAAAAAAAAAEAAAAAAAAAAAAAKysrAGVlZQC9vb0Arq6uAEdHRwAaGhoAcnJyAGNjYwBUVFQA5ubmABgYGAAJCQkAQ0NDADQ0NABFQ0MAJSUlABYWFgAHBwcAioqKACMjIwAUFBQABQUFACEhIQASEhIAAwMDAExMTAA9PT0A/Pz8AC4uLgCGhoYAHx8fAN7e3gABAQEAk5OTAOvr6wAODg4A+Pj4ACoqKgAbGxsADAwMAFVVVQA3NzcAKCgoAOfn5wDJyckACgoKADU1NQCNjY0AJiYmAEFAPwAICAgAYGBgAFFRUQDy8vIAJCQkAHx8fAD///8AQEBAAPDw8ADh4eEABAQEALS0tAAvLy8AS0lIACAgIAB4eHgAaWlpAAICAgA8PDwALS0tAElHRgAeHh4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOTk5OQAAAAAAOTk5OQAAAEQ5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5Czk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTkbOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTkmOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTg5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTYDOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5RSE/OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTkpLAAYCjk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OT4ABCEBOTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTQWACEhLDk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5IAtGAEIhQzk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5IRccAgkhPTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTkbQCElITVEITk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTkQIQAeIQAhRC05OTk5OTk5OTk5OTk5OTk5OTk5OTk5OSEhBiEvIRUMAAA5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OUQMISE3AAAAISE5OTk5OTk5OTk5OTk5OTk5OTk5OTk5ByEAIUQIITJBISE5OTk5OTk5OTk5OTk5OTk5OTk5OTk5IRlEDwAjISEhACEiOTk5OTk5OTk5OTk5OTk5OTk5OTk5OyRHIQA7ISEhISEhOTk5OTk5OTk5OTk5OTk5OTk5OTk5AAAAKCEWACEhAAAuOTk5OTk5OTk5OTk5OTk5OTk5OTkaIRYFACEhDiEzISEdOTk5OTk5OTk5OTk5OTk5OTk5OTk8IQAhISEhEwAhAAAuOTk5OTk5OTk5OTk5OTk5OTk5OTk5ISENIQAAADAhRB0hFDk5OTk5OTk5OTk5OTk5OTk5OTk5OSFEJCEAREREISERETk5OTk5OTk5OTk5OTk5OTk5OTk5ORkhISEqISFEIQAnITk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5IR8SIQAhADEhADk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5ISErIRQuIUg5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OTk5OgA5OQA5OTk5OTkAOTk5OTkAADkAAAAAAAAAAAAAAAAAAAAAADk5OQAAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////f////3////9/////v////7/////P////x////8H////B////4H///+A////wH///8A////gD///4Af///AD///wAf//+AB///wAP//+AB///gAP//8AB///wAH///AA///4AH///wA////wD////+f//////////'), auto;
+  }
+
+  .box,
+  .box button {
+    cursor: url('data:image/x-icon;base64,AAACAAEAICAQABIABwDoAgAAFgAAACgAAAAgAAAAQAAAAAEABAAAAAAAAAIAAAAAAAAAAAAAEAAAAAAAAAAkX4UAAAAAAP///wByd3oAOzs7AFGTvQAhISEAADxhANvb2wAAJj0A7e3tAJGRkQAAAAAAAAAAAAAAAAAAAAAAERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERZmEREREREREREREREREREWthERERERERERERERERERFmCRERZhEREREREREREREREXWRZjYREREREREREREREREXBrNhEREREREREREREREREWtmERERERERERERERERERa2gkEREREREREREREREREWtigkERERERERERERERERY2FCgkEREREREREREREREWYRFCgkERERERERERERERERERFCgkERERERERERERERERERFCgkERERERERERERERERERFCgkERERERERERERERERERFCgkERERERERERERERERERFCpBERERERERERERERERERFEQRERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERERH////////////////////////////////////////////////j////4////+Hn///4h////A////4f///8D////Af///iD///5wf///+D////wf///+D////wf///+H////x///////////////////////////////////////w=='), auto;
+  }
+</style>
+<style>
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    background-image: url(https://wallpapercave.com/wp/wp7467454.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    font-family: "Eagle Lake", serif;
+  }
+
+  input {
+    background: linear-gradient(rgba(255, 218, 33, 0.2), rgba(0, 0, 0, 0.2)), transparent;
+    border: 1;
+    width: calc(100% - 15px);
+    height: 50px;
+    border-color: rgba(39, 174, 9, 0.515);
+    border-width: 5px;
+  }
+
+  button {
+    width: 96px;
+    height: 30px;
+    line-height: 20px;
+    font-size: larger;
+    margin: 5px 0px;
+    background: linear-gradient(rgba(255, 218, 33, 0.2), rgba(255, 218, 33, 0.2)), transparent;
+  }
+
+  #forequal {
+    width: 198px;
+  }
+
+  .box {
+    margin: 50px 0px 100px 600px;
+    height: 400px;
+    width: 400px;
+  }
+
+  img {
+    margin: 0px 0px 0px 500px;
+  }
+
+  ::placeholder {
+    color: black;
+    font-size: larger;
+  }
+
+  .box button {
+    transition: all 0.4s ease;
+  }
+
+  .box button:hover {
+    background: linear-gradient(rgba(255, 218, 33, 0.6), rgba(255, 218, 33, 0.6)), transparent;
+    transform: scale(1.03);
+  }
+</style>
+
+<body>
+  <img height="400px" width="600px" src="/Ancient calculation table and symbols.png" alt="">
+  <div class="box">
+    <div class="row">
+      <input id="result" type="text" placeholder="Your values will be shown here">
+    </div>
+    <div class="row">
+      <button onclick="DisplayNumber(7)">
+        7
+      </button>
+      <button onclick="DisplayNumber(8)">
+        8
+      </button>
+      <button onclick="DisplayNumber(9)">
+        9
+      </button>
+      <button onclick="DisplayNumber('&#247')">
+        &#247;
+      </button>
+    </div>
+    <div class="row">
+      <button onclick="DisplayNumber(4)">
+        4
+      </button>
+      <button onclick="DisplayNumber(5)">
+        5
+      </button>
+      <button onclick="DisplayNumber(6)">
+        6
+      </button>
+      <button onclick="DisplayNumber('&#215')">
+        &#215;
+      </button>
+    </div>
+    <div class="row">
+      <button onclick="DisplayNumber(1)">
+        1
+      </button>
+      <button onclick="DisplayNumber(2)">
+        2
+      </button>
+      <button onclick="DisplayNumber(3)">
+        3
+      </button>
+      <button onclick="DisplayNumber('&#8722')">
+        &#8722;
+      </button>
+    </div>
+    <div class="row">
+      <button onclick="DisplayNumber(0)">
+        0
+      </button>
+      <button onclick="DisplayNumber('00')">
+        00
+      </button>
+      <button onclick="DisplayNumber('.')">
+        .
+      </button>
+      <button onclick="DisplayNumber('&#43')">
+        &#43;
+      </button>
+    </div>
+    <div class="row">
+      <button onclick="eraseAll()">
+        AC
+      </button>
+      <button onclick="eraseRight()">
+        &#9003;
+      </button>
+      <button id="forequal" onclick="output()">
+        &#61;
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    function DisplayNumber(num) {
+      if (result.value === "0" || result.value === "Error") {
+        result.value = num;
+      } else {
+        result.value += num;
+      }
+    }
+    function eraseAll() {
+      result.value = "0"
+    }
+    function eraseRight() {
+      result.value = result.value.slice(0, -1)
+    }
+    function output() {
+      try {
+        let expression = result.value
+          .replace(/\u00F7/g, "/")
+          .replace(/\u00D7/g, "*")
+          .replace(/\u2212/g, "-");
+
+        result.value = eval(expression);
+      } catch {
+        result.value = "Error";
+      }
+    }
+  </script>
+</body>
+
+</html>
