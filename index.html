@@ -47,6 +47,7 @@
     height: 50px;
     border-color: rgba(39, 174, 9, 0.515);
     border-width: 5px;
+    font-size: larger;
   }
 
   button {
@@ -165,7 +166,7 @@
 
   <script>
     function DisplayNumber(num) {
-      if (result.value === "0" || result.value === "Error") {
+      if (result.value === "0" || result.value === "Error" || result.value === "Infinity") {
         result.value = num;
       } else {
         result.value += num;
